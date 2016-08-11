@@ -7,7 +7,7 @@ news_commment nutzt das PlugIn Powermail_frontend von Powermail, um anstelle ein
 <li>Kommentar-Counter in der Listenansicht</li></ul>
 
 <h4>News Comments vorbereiten:</h4>
-News mit Powermail verbinden (Konstanten: addQueryString="1"), Formular für Kommentare erstellen (Name, E-Mail, Website, Kommentar, Senden, sowie News Titel und die News ID an das Formular übergeben)
+News mit Powermail verbinden (Konstanten: addQueryString="1"), Formular für Kommentare erstellen (Name, E-Mail, Website, Kommentar, Senden, sowie News Titel und die News ID an das Formular übergeben(s. Link unten))
 
 <h4>Einstellungen im PlugIn Powermail_frontend</h4>
 ListView: Choose Fields to show: Name und Kommentar; Gravatar und Verlinkung der Website erfolgen dann automatisch
