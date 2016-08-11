@@ -1,0 +1,6 @@
+plugin.cogtail.tx_newscomment {
+    # cat=plugin.tx_newscomment//a; type=int+; label=UID of news Field
+    filterfielduid = 7
+    # cat=plugin.tx_newscomment//a; type=int+; label=UID of website Field
+    websiteUid = 7
+}

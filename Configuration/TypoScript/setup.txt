@@ -1,0 +1,27 @@
+config.tx_extbase {
+    objects {
+        In2code\Powermail\Domain\Repository\MailRepository {
+            className = Cogtail\NewsComment\Domain\Repository\MailRepository
+        }
+    }
+
+    persistence {
+        classes {
+            Cogtail\NewsComment\Domain\Model\Mail {
+                mapping {
+                    tableName = tx_powermail_domain_model_mails
+                }
+            }
+        }
+    }
+}
+
+plugin.tx_newscomment {
+    settings {
+        filterUid = {$plugin.cogtail.tx_newscomment.filterfielduid}
+        websiteUid = {$plugin.cogtail.tx_newscomment.websiteUid}
+    }
+}
+
+plugin.tx_powermail.view.templateRootPaths.1 = EXT:news_comment/Resources/Private/Extensions/Powermail/
+plugin.tx_news.view.templateRootPaths.1 = EXT:news_comment/Resources/Private/Extensions/News/Templates/

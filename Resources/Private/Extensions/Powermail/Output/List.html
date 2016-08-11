@@ -1,0 +1,141 @@
+{namespace vh=In2code\Powermail\ViewHelpers}
+{namespace cogtail=Cogtail\NewsComment\ViewHelpers}
+<f:layout name="Default"/>
+
+Render Powermail_Frontend List View
+{mails}            Mail Objects
+
+
+<f:section name="main">
+
+    <f:flashMessages class="powermail_message powermail_message_error"/>
+
+    <div class="powermail_frontend">
+
+        <f:render partial="Output/Search" arguments="{_all}"/>
+
+        <f:render partial="Output/Export" arguments="{_all}"/>
+
+        <f:if condition="{mails}">
+            <f:then>
+                <div class="no-table powermail_frontend_list row">
+                    <f:for each="{mails}" as="mail" iteration="index">
+
+                        <f:alias map="{url:'{cogtail:url(data:\'{mail}\')}'}">
+			    <div class="comment-item row">
+                           <!-- <tr> -->
+                                <div class="row"><div class="small-2 medium-2 large-2 columns">	<div class="the-gravatar">
+                                    	<cogtail:gravatar email="{mail.senderMail}" img="true"/>
+                                				</div>
+				</div>
+                               <!-- <div class="nummern"><span title="{mail.uid}">{index.cycle}.</span></div> -->
+
+                                <f:for each="{fields}" as="field">
+                                      <div class="powermail-item"> 
+                                        <f:for each="{mail.answers}" as="answer">
+
+                                            <f:if condition="{answer.field} == {field}">
+                                                <f:comment>Data Type String</f:comment>
+                                                <f:if condition="{answer.valueType} == 0">
+						
+                                                    <f:if condition="{answer.field.marker}=='name'">
+                                                        <f:then>
+                                                            <div class="small-10 medium-10 large-10 columns"><div class="class-name"><div class="class-date"><f:format.date format="d.m.Y - H:i:s">{mail.crdate}</f:format.date></div>
+								<f:if condition="{mail.answers.4.value}">
+                                                                <f:then>
+                                                                    <f:link.external uri="{mail.answers.4.value}" target="_blank">
+                                                                        {answer.value}
+                                                                    </f:link.external>
+                                                                </f:then>
+                                                                <f:else>
+                                                                    <f:format.raw>{answer.value}</f:format.raw>
+                                                                </f:else>
+                                                            </f:if>
+							</div></div><!-- Ende large-8 --></div>
+                                                        </f:then>
+                                                        <f:else>
+                                                            <f:format.nl2br>{answer.value}</f:format.nl2br>
+                                                        </f:else>
+                                                    </f:if>
+                                                </f:if>
+
+						
+
+
+                                                <f:comment>Data Type Array</f:comment>
+                                               <f:if condition="{answer.valueType} == 1">
+                                                    <vh:String.ImplodeField objects="{answer.value}" separator=", "/>
+                                                </f:if>
+
+                                                <f:comment>Data Type Date (already parsed Timestamp by Model)
+                                                </f:comment>
+                                                <f:if condition="{answer.valueType} == 2">
+                                                    {answer.value}
+                                                </f:if>
+                                                <f:comment>Data Type Fileupload</f:comment>
+                                                <f:if condition="{answer.valueType} == 3">
+                                                    <f:for each="{answer.value}" as="subValue" iteration="uploadIndex">
+                                                        <f:link.page pageUid="{settings.misc.file.folder}{subValue}"
+                                                                     target="_blank">
+                                                            <f:if condition="{vh:Condition.IsImage(path:subValue)}">
+                                                                <f:then>
+                                                                    <f:if condition="{vh:Condition.FileExists(file:'{settings.misc.file.folder}{subValue}')}">
+                                                                        <f:then>
+                                                                            <f:image
+                                                                                    src="{settings.misc.file.folder}{subValue}"
+                                                                                    alt="{subValue}" width="200"
+                                                                                    maxHeight="200"/>
+                                                                        </f:then>
+                                                                        <f:else>
+                                                                            File does not exist
+                                                                        </f:else>
+                                                                    </f:if>
+                                                                </f:then>
+                                                                <f:else>
+                                                                    {subValue}
+                                                                </f:else>
+                                                            </f:if>
+                                                        </f:link.page>
+                                                        <br/>
+                                                    </f:for>
+                                                </f:if>
+                                            </f:if>
+                                        </f:for>
+                                     </div>  <!-- powermail-item end -->
+                                </f:for>
+                               <!-- <td> -->
+                                    <f:if condition="{settings.single.activateLink}">
+                                        <f:link.action action="show" pageUid="{singlePid}" arguments="{mail:mail}">
+                                            <f:translate key="PowermailFrontendDetailView">Details</f:translate>
+                                        </f:link.action>
+                                    </f:if>
+
+                                    <f:if condition="{vh:Condition.IsAllowedToEdit(settings:settings, mail:mail)}">
+                                        <f:link.action action="edit" pageUid="{editPid}" arguments="{mail:mail}">
+                                            <f:translate key="PowermailFrontendEditView">Edit</f:translate>
+                                        </f:link.action>
+                                    </f:if>
+
+                                    <f:if condition="{vh:Condition.IsAllowedToEdit(settings:settings, mail:mail)}">
+                                        <f:link.action action="delete" pageUid="{editPid}" arguments="{mail:mail}">
+                                            <f:translate key="PowermailFrontendDeleteView">Delete</f:translate>
+                                        </f:link.action>
+                                    </f:if>
+                               <!-- </td> -->
+                            <!-- </tr> -->
+			    </div>
+                        </f:alias>
+                    </f:for>
+                </div>
+            </f:then>
+            <f:else>
+                <p>
+                    <f:translate key="BackendListNoMails"/>
+                    <br/>
+                    <f:translate key="PowermailFrontendNoMailsDetail"/>
+                </p>
+            </f:else>
+        </f:if>
+
+    </div>
+</f:section>
