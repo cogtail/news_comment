@@ -1,7 +1,7 @@
 # news_comment
 <h1>TYPO3 Comments for News System and Powermail</h1>
 <h2>Beschreibung der Kommentar-Extension</h2>
-news_comment nutzt das PlugIn Powermail_frontend von Powermail, um anstelle eines Gästebuchs eine Kommentar-Extension für TYPO3 anzubieten. Somit stehen grundsätzlich alle Funktionen von Powermail_frontend zur Verfügung (z.B. <b>Kommentare freischalten</b>). Weitere Funktionen der Extension: 
+news_comment nutzt das PlugIn Powermail_frontend von Powermail, um anstelle eines Gästebuchs eine Kommentar-Extension für TYPO3 anzubieten. Somit stehen grundsätzlich alle Funktionen von Powermail_frontend und Powermail zur Verfügung (z.B. <b>Kommentare freischalten</b>). Weitere Funktionen der Extension: 
 <ul><li>Gravatar</li> 
 <li>Website (sofern angegeben) wird im Namen des Kommentatoren verlinkt</li>
 <li>Kommentar-Counter in der Listenansicht</li></ul>
@@ -18,6 +18,13 @@ ListView: Choose Fields to show: Name und Kommentar; Gravatar und Verlinkung der
 
 <h4>Links: Tutorial von TYPO3-Probleme</h4>
 http://www.typo3-probleme.de/2014/07/21/typo3-tx_news-daten-an-powermail-2-x-uebergeben-1366/
+
+<h4>To do-Liste für TYPO3 Comments for News System and Powermail</h4>
+<ul>
+<li>Auf Kommentare antworten</li>
+<li>E-Mail-Notification</li>
+<li>Noch leichtere Integration</li>
+</ul>
 
 <h4>Website</h4>
 http://www.cogtail.de
