@@ -9,6 +9,9 @@ news_commment nutzt das PlugIn Powermail_frontend von Powermail, um anstelle ein
 <h4>News Comments vorbereiten:</h4>
 News mit Powermail verbinden (Konstanten: addQueryString="1"), Formular für Kommentare erstellen (Name, E-Mail, Website, Kommentar, Senden, sowie News Titel und die News ID an das Formular übergeben)
 
+<h4>Einstellungen im PlugIn Powermail_frontend</h4>
+ListView: Choose Fields to show: Name und Kommentar; Gravatar und Verlinkung der Website erfolgen dann automatisch
+
 <h4>Abhängigkeiten:</h4>
 <ul><li>TYPO3 7.6 (TYPO3 8-Unterstützung in einigen Tagen)</li>
 <li>Powermail 2 (Powermail 3 in einigen Tagen)</li></ul>
