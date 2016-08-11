@@ -1,12 +1,13 @@
 # news_comment
 <h1>TYPO3 Comments for News System and Powermail</h1>
 
+<span>Vorbereitung:</span>
 News mit Powermail verbinden (Konstanten: addQueryString="1"), Formular für Kommentare erstellen (Name, E-Mail, Website, Senden sowie News Titel und die News ID an das Formular übergeben)
 
 Abhängigkeiten:
 <ul><li>TYPO3 7.6 (TYPO3 8-Unterstützung in einigen Tagen)</li>
 <li>Powermail 2 (Powermail 3 in einigen Tagen)</li></ul>
 
-<span>Links/Hilfen:</span>
+<span>Links:</span>
 http://www.typo3-probleme.de/2014/07/21/typo3-tx_news-daten-an-powermail-2-x-uebergeben-1366/ 
 
