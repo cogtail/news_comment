@@ -24,6 +24,8 @@ http://www.typo3-probleme.de/2014/07/21/typo3-tx_news-daten-an-powermail-2-x-ueb
 <li>Auf Kommentare antworten</li>
 <li>E-Mail-Notification</li>
 <li>Noch leichtere Integration</li>
+<li>Bootstrap (aktuell ZURB Foundation)</li>
+<li>Demo (kommt in Kürze)</li>
 </ul>
 
 <h4>Website</h4>
