@@ -17,5 +17,8 @@ ListView: Choose Fields to show: Name und Kommentar; Gravatar und Verlinkung der
 <li>Powermail 2 (Powermail 3 in einigen Tagen)</li></ul>
 
 <h4>Links: Tutorial von TYPO3-Probleme</h4>
-http://www.typo3-probleme.de/2014/07/21/typo3-tx_news-daten-an-powermail-2-x-uebergeben-1366/ 
+http://www.typo3-probleme.de/2014/07/21/typo3-tx_news-daten-an-powermail-2-x-uebergeben-1366/
+
+<h4>Website</h4>
+http//:www.cogtail.de
 
