@@ -26,6 +26,7 @@ http://www.typo3-probleme.de/2014/07/21/typo3-tx_news-daten-an-powermail-2-x-ueb
 <li>Noch leichtere Integration</li>
 <li>Bootstrap (aktuell ZURB Foundation)</li>
 <li>Demo (kommt in Kürze)</li>
+<li>Counter verbessern</li>
 </ul>
 
 <h4>Website</h4>
