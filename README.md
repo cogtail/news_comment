@@ -20,5 +20,5 @@ ListView: Choose Fields to show: Name und Kommentar; Gravatar und Verlinkung der
 http://www.typo3-probleme.de/2014/07/21/typo3-tx_news-daten-an-powermail-2-x-uebergeben-1366/
 
 <h4>Website</h4>
-http//:www.cogtail.de
+http://www.cogtail.de
 
