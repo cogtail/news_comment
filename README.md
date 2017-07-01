@@ -1,6 +1,6 @@
 # news_comment
 
-<p>Obsolet: please use <a href="https://typo3.org/extensions/repository/view/news_comment">news_comment instead</a></p>
+<p>Obsolet: please use <a href="https://typo3.org/extensions/repository/view/news_comment">news_comment/a> instead<</p>
 <h1>TYPO3 Comments for News System and Powermail</h1>
 <h2>Beschreibung der Kommentar-Extension</h2>
 news_comment nutzt das PlugIn Powermail_frontend von Powermail, um anstelle eines Gästebuchs eine Kommentar-Extension für TYPO3 und News System (tx_news) anzubieten. Somit stehen grundsätzlich alle Funktionen von Powermail_frontend und Powermail zur Verfügung (z.B. <b>Kommentare freischalten</b>). Weitere Funktionen der Extension: 
